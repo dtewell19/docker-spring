@@ -11,7 +11,6 @@ pipeline {
     }
     stage('Containerize ') {
       steps {
-        sh 'export PATH="/usr/local/opt/node@10/bin:/usr/local/opt/node@10/bin:/usr/local/sbin:/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Applications/Wireshark.apContents/MacOS"'
         sh '/usr/local/bin/mvn install dockerfile:build'
       }
     }
