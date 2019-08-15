@@ -3,12 +3,12 @@ pipeline {
   stages {
     stage('Build') {
       steps {
-        sh 'mvn package'
+        sh '/usr/local/bin/mvn package'
       }
     }
     stage('Containerize ') {
       steps {
-        sh 'mvn install dockerfile:build'
+        sh '/usr/local/bin/mvn install dockerfile:build'
       }
     }
   }
