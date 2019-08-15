@@ -13,7 +13,7 @@ pipeline {
     }
     stage('Deploy to Docker') {
       steps {
-        sh 'docker run -p 9000:9000 -t springio/gs-spring-boot-docker'
+        sh 'docker run -p 9081:9081 -t springio/gs-spring-boot-docker'
       }
     }
   }
